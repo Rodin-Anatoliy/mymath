@@ -2,8 +2,17 @@
 ## [Unreleased]
 
 
+<a name="1.1.0"></a>
+## [1.1.0] - 2024-06-24
+### Features
+- test
+
+
 <a name="1.0.1"></a>
 ## [1.0.1] - 2024-06-24
+
+<a name="v3.0.0"></a>
+## [v3.0.0] - 2024-06-24
 
 <a name="1.0.0"></a>
 ## [1.0.0] - 2024-06-24
@@ -41,8 +50,10 @@
 - add README.md
 
 
-[Unreleased]: https://github.com/Rodin-Anatoliy/mymath/compare/1.0.1...HEAD
-[1.0.1]: https://github.com/Rodin-Anatoliy/mymath/compare/1.0.0...1.0.1
+[Unreleased]: https://github.com/Rodin-Anatoliy/mymath/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/Rodin-Anatoliy/mymath/compare/1.0.1...1.1.0
+[1.0.1]: https://github.com/Rodin-Anatoliy/mymath/compare/v3.0.0...1.0.1
+[v3.0.0]: https://github.com/Rodin-Anatoliy/mymath/compare/1.0.0...v3.0.0
 [1.0.0]: https://github.com/Rodin-Anatoliy/mymath/compare/v1.0.0...1.0.0
 [v1.0.0]: https://github.com/Rodin-Anatoliy/mymath/compare/0.5.0...v1.0.0
 [0.5.0]: https://github.com/Rodin-Anatoliy/mymath/compare/0.4.0...0.5.0
