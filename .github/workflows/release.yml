@@ -58,6 +58,38 @@ jobs:
           GOROOT: /opt/hostedtoolcache/go/1.17.13/x64
           VERSION: ${{ steps.gsemver.outputs.VERSION }}
 
+      - name: Install git-chglog
+        run: |
+          go install github.com/git-chglog/git-chglog/cmd/git-chglog@latest
+          echo "${GITHUB_WORKSPACE}/bin" >> $GITHUB_PATH
+
+      - name: Generate Changelog
+        id: changelog
+        run: |
+          export REPO_URL="https://github.com/${GITHUB_REPOSITORY}"
+          git-chglog --next-tag ${{ env.VERSION }} -o CHANGELOG.md --repository-url $REPO_URL
+          CHANGELOG=$(cat CHANGELOG.md)
+          echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "--- CHANGELOG content ---"
+          cat CHANGELOG.md
+          echo "--- End of CHANGELOG content ---"
+        shell: /usr/bin/bash -e {0}
+        env:
+          GOROOT: /opt/hostedtoolcache/go/1.17.13/x64
+          VERSION: ${{ env.VERSION }}
+          TAG_EXISTS: false
+
+      - name: Commit and Push Changelog
+        if: env.TAG_EXISTS == 'false'
+        run: |
+          git add CHANGELOG.md
+          git commit -m "chore: update CHANGELOG for version ${{ env.VERSION }}"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create Git tag
         if: env.TAG_EXISTS == 'false'
         run: |
