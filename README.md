@@ -11,3 +11,4 @@ major version - update with commit "BREAKING CHANGE: ..." or "feat!: ..."<br />
 
 
 #### [Правила составления коммитов](https://www.conventionalcommits.org/en/v1.0.0/)
+
