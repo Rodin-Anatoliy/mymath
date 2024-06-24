@@ -2,8 +2,11 @@
 ## [Unreleased]
 
 
+<a name="1.0.1"></a>
+## [1.0.1] - 2024-06-24
+
 <a name="1.0.0"></a>
-## [1.0.0] - 0001-01-01
+## [1.0.0] - 2024-06-24
 
 <a name="v1.0.0"></a>
 ## [v1.0.0] - 2024-06-25
@@ -38,7 +41,8 @@
 - add README.md
 
 
-[Unreleased]: https://github.com/Rodin-Anatoliy/mymath/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/Rodin-Anatoliy/mymath/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/Rodin-Anatoliy/mymath/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/Rodin-Anatoliy/mymath/compare/v1.0.0...1.0.0
 [v1.0.0]: https://github.com/Rodin-Anatoliy/mymath/compare/0.5.0...v1.0.0
 [0.5.0]: https://github.com/Rodin-Anatoliy/mymath/compare/0.4.0...0.5.0
